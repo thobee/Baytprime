@@ -476,6 +476,8 @@ main:focus { outline: none; }
   font-weight: 700;
 }
 .mobile-menu-phone .icon { color: var(--gold-dark); stroke-width: 2; }
+.mobile-menu-phone + .mobile-menu-phone { margin-top: -20px; }
+.contact-list li > span:last-child { min-width: 0; overflow-wrap: break-word; }
 
 body.menu-locked { overflow: hidden; }
 
@@ -927,6 +929,7 @@ body.menu-locked { overflow: hidden; }
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
+  min-width: 0;
   padding: 48px;
 }
 .brand-panel h3 { margin-top: 18px; color: var(--white); font-size: clamp(26px, 3vw, 34px); font-weight: 800; letter-spacing: -0.02em; }
@@ -1258,6 +1261,8 @@ body.menu-locked { overflow: hidden; }
 
 @media (max-width: 380px) {
   .brand-text small { letter-spacing: 0.16em; }
+  /* Long button labels wrap instead of pushing past the panel edge */
+  .brand-panel .btn { max-width: 100%; padding-block: 10px; white-space: normal; text-align: left; }
 }
 
 /* ---------- Reduced motion ---------- */
